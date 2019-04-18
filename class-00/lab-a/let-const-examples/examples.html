@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ES6 Examples</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>ES6 examples for Code 301</h1>
+
+    <section>
+      <h2>let &amp; const</h2>
+      <p>The best way to get a basic understanding of these types of variable declarations is to see them in action. Follow the instructions below to enter the following code snippets into the console and then interact with them.</p>
+      <p>But first, a quick refresher on scope.<p>
+      <pre><code>
+// Open your JavaScript console.
+// Enter the following line of code:
+
+var global = 'I am a global variable';
+
+// Now let's make a function to create some scope.
+
+function scopeMaker() {
+  var local = 'I am a local variable.'
+  console.log(global, 'logged from inside scopeMaker().')
+  console.log(local, 'logged from inside scopeMaker().')
+}
+scopeMaker();
+
+// In your JavaScript console, type 'global' without the quotation marks so that you can inspect the value of the variable. Keep in mind that the console is globally scoped.
+
+// 'global' works just fine.
+
+// Now try the same thing with 'local'. It doesn't work because it is declared inside the function.
+
+// What about let and const? For the purposes of global and local scope with functions, they work exactly the same. Both of the variables declared above could have been declared with let or const and nothing would have changed.
+
+// Now let's look at how let and const are different.
+
+// A key thing to know about let and const is that they are block scoped. In other words, any code block (not just functions) creates scope for variables declared with let and const. Try the following example by entering the code into your dev console.
+
+const anotherGlobal = true;
+
+if(anotherGlobal) {
+  console.log('Do global variables declared with const behave like other global variables with respect to scope?', anotherGlobal);
+  let anotherLocal = 'This is a local variable declared with let';
+  console.log(anotherLocal);
+}
+
+// Now try entering this in the console in the global scope:
+
+console.log(anotherLocal);
+
+// "Uncaught ReferenceError: anotherLocal is not defined"
+
+// We've seen that before when trying to use a local variable outside of its scope. But in this case, the code block of the "if" statement created the scope, not the function.
+
+// One more thing to try: attempt to reassign the variable declared with const:
+
+anotherGlobal = 'foo';
+
+// "Uncaught TypeError: Assignment to constant variable."
+
+// Thus, the variable assigned with const cannot be reassigned. That's the basics of let and const.
+
+// Which should you use? Depends. Read the articles linked in the README to gain a deeper understanding. For the purposes of this assignment, use "let" for everything.
+
+// You're now ready to start working with the starter code.
+      </code></pre>
+    </section>
+  </body>
+</html>

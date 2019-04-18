@@ -1,0 +1,39 @@
+* {
+  font-family: Helvetica, sans-serif;
+  line-height: 1.3;
+}
+
+body {
+  background: #333;
+}
+
+h1 {
+  color: #ddd;
+}
+
+h1, h2 {
+  width: 50%;
+  text-align: center;
+  margin: 10px auto;
+}
+
+section {
+  background: #ddd;
+  border-radius: 50px;
+  padding: 20px;
+  margin: 20px;
+  border: 5px solid darkred;
+}
+
+.mono {
+  font-family: Courier, monospace;
+  color: darkred;
+}
+
+code {
+  font-family: Courier, monospace;
+}
+
+pre {
+  white-space: pre-wrap;
+}
