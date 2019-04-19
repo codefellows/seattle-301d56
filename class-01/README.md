@@ -11,7 +11,7 @@ We will spend some time reviewing the concepts from the lab 00 assignments. We w
 - Announcements
     - Welcome! So glad you're here!
     - There's an extra Partner Power Hour tomorrow (Tuesday)! Report is due Wednesday.
-- Overview of 301
+- Week-by-week overview of 301
 - Review of lab 00 assignments
 - Discussion of context, scope, "this", and "new"
 - Review of CSS floats

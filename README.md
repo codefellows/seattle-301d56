@@ -35,4 +35,4 @@ There are several types of assignments that are required for this course, and th
 All assignments graded out of a number of points lose 20% automatically for late submissions. (Resubmits after an on-time submission do not incur this penalty.)
 
 * Code Challenges: Each code challenge is released at 5pm, to be worked on that night. The code challenge is due the next day by the start of lecture. Code challenges lock the Sunday before project week.
-* Labs: Each lab is released at 5pm, and should be worked on the next day during lab time. The lab is due by the start of the following lecture. Labs lock the Sunday before project week.
+* Labs: Each lab is released at 8:30am, and should be worked on during lab time. The lab is due by the start of lecture. Labs lock the Sunday before project week.
