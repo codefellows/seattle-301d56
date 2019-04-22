@@ -11,12 +11,14 @@ We will spend some time reviewing the concepts from the lab 00 assignments. We w
 - Announcements
     - Welcome! So glad you're here!
     - There's an extra Partner Power Hour tomorrow (Tuesday)! Report is due Wednesday.
+    - Accessibility meetup on campus tonight from last week's PPH speaker, 6-8pm.
 - Week-by-week overview of 301
+    - Week 3: An Awesome Week
 - Review of lab 00 assignments
-- Discussion of context, scope, "this", and "new"
+- Discussion of context, scope, `this`, and `new`
 - Review of CSS floats
 - Introduction to code challenges
-- Introduction of today's Code Challenge topic
+- Introduction of forEach
 - Lab Prep
 
 ## Learning Objectives
@@ -26,3 +28,10 @@ As as result of completing Lecture 1 of Code 301, students will:
 - Gain an understanding of context, scope, "this", and the "new" keyword
 - Refresh their understanding of CSS floats
 
+## Warmup Questions
+
+Answer these in writing with a partner (on paper or on a whiteboard).
+1. What is ES6?
+2. Why would you choose to use or not use ES6 on a project?
+3. What does the CSS `float` property do?
+4. What are CSS media queries?
