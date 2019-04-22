@@ -15,9 +15,9 @@ Why does this happen? Arrow functions do not bind "this", so the context of "thi
 
 ## Assignment Tasks
 
-1. The `app.js` file contains examples of function expressions, as you are accustomed to seeing. Work through steps 1-9, reading the notes and reviewing the refactored samples. 
+1. The `app.js` file contains examples of function expressions, as you are accustomed to seeing. Work through steps 1-9, reading the notes and reviewing the refactored samples.
 1. For each of these steps, uncomment the console.log line. Open the `index.html` file in the browser and verify the correct output in the developer console.
-1. To complete step 10, refactor the function expressions one at a time. Uncomment the console.log line and use it to check that the output is the same after you have completed the refactoring process.
+1. To complete step 10, refactor the function expressions one at a time. Uncomment the console.log line and use it to check that the output is the same after you have completed the refactoring process. If the output is not the same (including if a comment tells you that the code will break), it is okay to leave the code in its original, working state; your goal is to convert as many functions as possible to arrow functions.
 1. To complete step 11, uncomment the two console.log lines and observe the output in the developer console in the browser. Answer the corresponding questions.
 
 ## Additional resources
@@ -26,7 +26,7 @@ Why does this happen? Arrow functions do not bind "this", so the context of "thi
 
 ## Submission Instructions
 
-1. When finished, push your branch back to your fork on GitHub, and merge it into master. 
+1. When finished, push your branch back to your fork on GitHub, and merge it into master.
 1. Submit a link to your PR. You can link to a pull request even if the pull request is already merged or closed.
 1. Add a comment in your Canvas assignment which includes the following:
     - A question within the context of today's lab assignment
