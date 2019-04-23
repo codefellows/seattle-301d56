@@ -7,3 +7,7 @@ li {
   height: 25px;
   width: 100px;
 }
+
+.is-hidden {
+  display: none;
+}
