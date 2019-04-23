@@ -1,7 +1,3 @@
-.float-image {
-  max-width: 200px;
-}
-
 h1 {
   padding: 10px;
   font-size: 3em;
@@ -12,3 +8,21 @@ h1 {
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+.float-image {
+  max-width: 200px;
+}
+/* remembered media query syntax https://www.w3schools.com/cssref/css3_pr_mediaquery.asp */
+
+@media only screen and (min-width: 400px) {
+  .float-image {
+    float: left;
+  }
+  .one-float:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
