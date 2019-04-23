@@ -10,7 +10,7 @@ This is an independent project, but your are free to collaborate with your class
 
 ## Resources
 
-- [SMACSS Official Documentation](https://smacss.com/)
+- [SMACSS Official Documentation](http://smacss.com/)
 - [Desktop wireframe](./comps/desktop-view.png)
 - [Mobile wireframe](./comps/mobile-view.png)
 
