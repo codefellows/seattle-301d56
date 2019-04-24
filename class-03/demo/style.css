@@ -4,7 +4,7 @@ div {
 
 li {
   border: 1px solid red;
-  width: 100px;
+  max-width: 50%;
 }
 
 .is-hidden {
