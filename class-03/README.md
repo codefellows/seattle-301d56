@@ -24,3 +24,8 @@ As a result of completing Lecture 3 of Code 301, students will:
 - Understand the benefits of using a templating library to render multiple elements
 - Be able to distinguish between the different Handlebars expression types
 - Understand how to style pages using Flexbox
+
+## Warmup Part 2
+1. What is Handlebars?
+2. What does Handlebars do?
+3. Why is that good?
