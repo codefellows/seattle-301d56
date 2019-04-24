@@ -20,7 +20,7 @@ Assignments are submitted using a professional-grade Git-flow. If you haven't do
 |1pm-2pm|Lunch    | Lunch   | Lunch   |Lunch    |Lunch    |
 |2pm-5pm|Lecture 1|Lecture 2|Lecture 3|Lecture 4|Lecture 5|
 |5pm-6pm|Code Challenge 1   |Code Challenge 2   |Code Challenge 3   |Code Challenge 4   |Code Challenge 5   |
-|after 6pm|Finish Code Challenge, read through Lab 1, readings for Lecture 2|Finish Code Challenge, read through Lab 2, readings for Lecture 3|Finish Code Challenge, read through Lab 3, readings for Lecture 4|Finish Code Challenge, read through Lab 4, readings for Lecture 5|Finish Code Challenge over weekend, readings for lecture 6|
+|after 6pm|Finish Code Challenge, readings for Lecture 2|Finish Code Challenge, readings for Lecture 3|Finish Code Challenge, readings for Lecture 4|Finish Code Challenge, readings for Lecture 5|Finish Code Challenge over weekend, readings for lecture 6|
 
 ## Assignments, Deadlines, Late Work, and other fun things
 There are several types of assignments that are required for this course, and they have different policies on late work.
