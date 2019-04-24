@@ -7,7 +7,8 @@ Today we will discuss the benefits of using a templating library called Handleba
 ## Agenda
 
 - Announcements
-    - Still working with same partner for tomorrow's lab!
+    - Losing Lena but gaining Jason--he'll be here tomorrow!
+    - Still working with same partner for tomorrow's lab.
 - Warm-up exercise
 - Review code challenges
 - Introduction of today's code challenge topic
