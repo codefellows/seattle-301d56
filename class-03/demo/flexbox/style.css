@@ -10,19 +10,20 @@ body {
 }
 
 .float-image {
-  max-width: 200px;
+  width: 100%;
 }
-/* remembered media query syntax https://www.w3schools.com/cssref/css3_pr_mediaquery.asp */
 
-@media only screen and (min-width: 400px) {
-  .float-image {
-    float: left;
-  }
-  .one-float:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+.img-container {
+  flex: 1;
+}
+
+p {
+  flex: 3;
+}
+
+.flex-parent {
+  display: flex;
+  align-items: center;
 }
 
 
