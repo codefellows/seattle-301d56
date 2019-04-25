@@ -10,6 +10,7 @@ We will also discuss the basics of pattern matching with regular expressions, in
 
 - Announcements
     - Partner Power Hour tomorrow
+    - Lock your screens!
 - Warm-up exercise
 - Review code challenges
 - Introduction of today's code challenge topic
