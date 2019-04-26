@@ -25,4 +25,3 @@ As a result of completing lecture 5 of Code 301, students will:
 - Understand the difference between deploying static and dynamic web applications
 - Understand deployment processes over multiple environments
 - Be able to deploy dynamic web applications to Heroku
-
