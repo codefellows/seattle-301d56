@@ -39,12 +39,17 @@ function manageForms() {
 
 function fetchCityData(event) {
   event.preventDefault();
+  // grab and lower-case whatever got typed in
   let searchQuery = $('#input-search').val().toLowerCase();
 
+  // send a request to our server
   $.ajax({
     url: `${__API_URL__}/location`,
     method: 'GET',
-    data: { data: searchQuery }
+    // send along the specific location as a query param with the key data
+    data: {
+      data: searchQuery
+    }
   })
     .then(location => {
       displayMap(location);
