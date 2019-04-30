@@ -1,5 +1,7 @@
 # Class 06: Node, npm, Express, and APIs
 
+## Code demo from lecture is at https://github.com/mnfmnfm/puppy-api
+
 ## Overview
 
 Today we will take a step into the back end, beginning to write a proper `server.js` file to serve API data to the City Explorer client application. You will continue to build out this file through lab 9, working with a new partner each day.
