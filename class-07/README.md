@@ -8,6 +8,8 @@ Today we will continue to work with third-party APIs to request data. Part of be
 
 - Announcements
     - 1:1s continue tomorrow
+    - Reminder that Brian is teaching React next week, it will be awesome
+    - Michelle leaving 5:45 today
 - Warm-up exercise
 - Review code challenges
 - Introduction of today's code challenge topic
