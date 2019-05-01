@@ -24,6 +24,8 @@ app.get('/location', (request, response) => {
     // make a request to the Google Geocoding API for geocoding data
     let geocodeURL = `https://maps.googleapis.com/maps/api/geocode/json?address=${queryData}&key=${process.env.GOOGLE_MAPS_API_KEY}`;
     superagent.get(geocodeURL)
+      // for setting headers, use .set
+      // .set('Authorization', `Bearer ${process.env.EVENTBRITE_API_KEY}`)
       // when the data comes back from the gmaps api
       .end( (err, googleMapsApiResponse) => {
         console.log(googleMapsApiResponse.body);
