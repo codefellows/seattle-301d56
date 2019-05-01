@@ -50,7 +50,7 @@ function Weather(day) {
 function Event(event) {
   this.link = event.url;
   this.name = event.name.text;
-  this.event_date = new Date(event.start.local).toString().slice(0, 15);
+  this.event_date = new Date(event.start.local).toDateString();
   this.summary = event.summary;
 }
 
@@ -80,9 +80,10 @@ function getWeather(request, response) {
 
 
 function getEvents(request, response) {
-  const url = `https://www.eventbriteapi.com/v3/events/search?token=${process.env.EVENTBRITE_API_KEY}&location.address=${request.query.data.formatted_query}`;
+  const url = `https://www.eventbriteapi.com/v3/events/search?location.address=${request.query.data.formatted_query}`;
 
   superagent.get(url)
+    .set('Authorization', `Bearer ${process.env.EVENTBRITE_API_KEY}`)
     .then(result => {
       const events = result.body.events.map(eventData => {
         const event = new Event(eventData);
