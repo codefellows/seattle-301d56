@@ -87,11 +87,13 @@ function getResource(resource, location) {
     });
 }
 
+//                       []  weather-results weather-results-template
 function compileTemplate(input, sectionClass, templateId) {
   $(`.${sectionClass}`).empty();
 
   let template = Handlebars.compile($(`#${templateId}`).text());
 
+  //             Weather instance from the server
   input.forEach(element => {
     $(`.${sectionClass}`).append(template(element));
   });
