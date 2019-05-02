@@ -81,10 +81,13 @@ function searchToLatLong(query) {
         return superagent.get(url)
           .then(res => {
             let newLocation = new Location(query, res);
-            let insertStatement = 'INSERT INTO location ( search_query, formatted_query, latitude, longitude ) VALUES ( $1, $2, $3, $4 );';
+            let insertStatement = 'INSERT INTO location ( search_query, formatted_query, latitude, longitude ) VALUES ( $1, $2, $3, $4 ) RETURNING id;';
             let insertValues = [ newLocation.search_query, newLocation.formatted_query, newLocation.latitude, newLocation.longitude ];
-            client.query(insertStatement, insertValues);
-            return newLocation;
+            client.query(insertStatement, insertValues)
+              .then (pgResponse => {
+                newLocation.id = pgResponse.rows[0].id;
+                return newLocation;
+              });
           })
           .catch(error => handleError(error));
       }
@@ -92,17 +95,30 @@ function searchToLatLong(query) {
 }
 
 function getWeather(request, response) {
-  const url = `https://api.darksky.net/forecast/${process.env.WEATHER_API_KEY}/${request.query.data.latitude},${request.query.data.longitude}`;
+  let sqlStatement = 'SELECT * FROM weather WHERE location_id = $1;';
+  let values = [ request.query.data.id ];
+  client.query(sqlStatement, values)
+    .then( (data) => {
+      if (data.rowCount > 0) {
+        response.send(data.rows);
+      } else {
+        const url = `https://api.darksky.net/forecast/${process.env.WEATHER_API_KEY}/${request.query.data.latitude},${request.query.data.longitude}`;
 
-  superagent.get(url)
-    .then(result => {
-      const weatherSummaries = result.body.daily.data.map(day => {
-        return new Weather(day);
-      });
+        superagent.get(url)
+          .then(result => {
+            const weatherSummaries = result.body.daily.data.map(day => {
+              let newWeather =  new Weather(day);
+              let insertStatement = 'INSERT INTO weather (forecast, time, location_id) VALUES ( $1, $2, $3 );';
+              let values = [newWeather.forecast, newWeather.time, request.query.data.id ];
+              client.query(insertStatement, values);
+              return newWeather;
+            });
+            response.send(weatherSummaries);
+          })
+          .catch(error => handleError(error, response));
+      }
+    });
 
-      response.send(weatherSummaries);
-    })
-    .catch(error => handleError(error, response));
 }
 
 
