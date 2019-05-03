@@ -7,12 +7,13 @@ Today we will discuss the call stack and how JavaScript executes code synchronou
 ## Agenda
 
 - Announcements
-    - Reminder: Michelle is out, Brian is in next week!
+    - Reminder: Michelle is out, Brian is in next week Monday-Thursday!
     - Paired lab on Monday, solo for the rest of the week
+    - Feedback is available today after lecture
     - Final exam will go out end of next week
 - Warm-up exercise
 - Review code challenges (feat. Brai)
-- Code review of lab assignment
+- Code review of lab assignment (feat. mob debugging)
 - The call stack and tracing the order of code execution
 - Lab Overview
 
