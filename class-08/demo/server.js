@@ -94,30 +94,64 @@ function searchToLatLong(query) {
     });
 }
 
+let weatherTimeout = 15 * 1000;
 function getWeather(request, response) {
-  let sqlStatement = 'SELECT * FROM weather WHERE location_id = $1;';
+  getData('weather', request, response);
+}
+
+let timeouts = {
+  weather: 15 * 1000
+};
+
+let dataFreshFunctions = {
+  weather: getFreshWeatherData
+};
+
+function getData(tableName, request, response) {
+  let sqlStatement = `SELECT * FROM ${tableName} WHERE location_id = $1;`;
   let values = [ request.query.data.id ];
   client.query(sqlStatement, values)
     .then( (data) => {
       if (data.rowCount > 0) {
-        response.send(data.rows);
-      } else {
-        const url = `https://api.darksky.net/forecast/${process.env.WEATHER_API_KEY}/${request.query.data.latitude},${request.query.data.longitude}`;
-
-        superagent.get(url)
-          .then(result => {
-            const weatherSummaries = result.body.daily.data.map(day => {
-              let newWeather =  new Weather(day);
-              let insertStatement = 'INSERT INTO weather (forecast, time, location_id) VALUES ( $1, $2, $3 );';
-              let values = [newWeather.forecast, newWeather.time, request.query.data.id ];
-              client.query(insertStatement, values);
-              return newWeather;
+        // we got weather data from our database
+        // check if the data is fresh
+        let dataCreatedTime = data.rows[0].created_at;
+        let now = Date.now();
+        if (now - dataCreatedTime > timeouts[tableName]) {
+          // delete old data from the database
+          let deleteStatement = `DELETE FROM ${tableName} WHERE location_id = $1`;
+          client.query(deleteStatement, values)
+            .then( () => {
+              // get fresh data
+              dataFreshFunctions[tableName](request, response);
             });
-            response.send(weatherSummaries);
-          })
-          .catch(error => handleError(error, response));
+        } else {
+          response.send(data.rows);
+        }
+      } else {
+        dataFreshFunctions[tableName](request, response);
       }
     });
+
+}
+
+// 7266, 7238
+
+function getFreshWeatherData(request, response) {
+  const url = `https://api.darksky.net/forecast/${process.env.WEATHER_API_KEY}/${request.query.data.latitude},${request.query.data.longitude}`;
+
+  superagent.get(url)
+    .then(result => {
+      const weatherSummaries = result.body.daily.data.map(day => {
+        let newWeather =  new Weather(day);
+        let insertStatement = 'INSERT INTO weather (forecast, time, created_at, location_id) VALUES ( $1, $2, $3, $4 );';
+        let values = [newWeather.forecast, newWeather.time, Date.now(), request.query.data.id ];
+        client.query(insertStatement, values);
+        return newWeather;
+      });
+      response.send(weatherSummaries);
+    })
+    .catch(error => handleError(error, response));
 
 }
 

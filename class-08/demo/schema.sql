@@ -11,5 +11,6 @@ CREATE TABLE location (
 CREATE TABLE weather (
   forecast VARCHAR(255),
   time CHAR(15),
+  created_at BIGINT,
   location_id INTEGER REFERENCES location(id)
 );
