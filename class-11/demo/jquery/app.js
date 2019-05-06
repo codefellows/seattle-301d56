@@ -1,12 +1,14 @@
 let state = {};
 
-let source = document.getElementById('stuff-template').innerHTML;
+let source = document.getElementById('content-template').innerHTML;
 let template = Handlebars.compile(source);
-$('#clicker').on('click', handleClick);
-$('#wordsInput').on('change', handleWords);
+
+$('#btn').on('click', handleClick);
+$('#words').on('change', handleWords);
 
 function handleWords() {
   state.words = $(this).val();
+  console.log(state.words);
 }
 
 function handleClick(event) {
@@ -25,7 +27,7 @@ function init() {
 }
 
 function render() {
-  $('#stuff').html(template(state));
+  $('#content').html(template(state));
 }
 
 $(function() {

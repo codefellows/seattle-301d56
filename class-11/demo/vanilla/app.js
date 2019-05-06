@@ -1,9 +1,9 @@
 let state = {};
 
-let button = document.getElementById('clicker');
+let button = document.getElementById('btn');
 button.addEventListener('click', handleClick);
 
-let input = document.getElementById('wordsInput');
+let input = document.getElementById('words');
 input.addEventListener('change', handleWords);
 
 function handleWords(e) {
@@ -27,7 +27,7 @@ function init() {
 }
 
 function render() {
-  document.getElementById('words').textContent = state.words;
+  document.getElementById('content').textContent = state.words;
 }
 
 init();

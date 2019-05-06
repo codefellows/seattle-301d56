@@ -3,17 +3,15 @@ import React from 'react';
 const Header = () => {
   return (
     <header>
-      <h1>Word Reverser!</h1>
+      <h1>Word Reverser - React!</h1>
     </header>
   );
 };
 
-const Footer = () => <footer>&copy; 2018 Code Fellows</footer>;
-
-class Main extends React.Component {
+class Content extends React.Component {
   constructor(props) {
     super(props);
-    let params = new URL(document.location).searchParams;
+
     this.state = {
       words: 'nothing to see here',
     };
@@ -22,6 +20,7 @@ class Main extends React.Component {
   handleWord = e => {
     let words = e.target.value;
     this.setState({ words });
+    console.log(this.state);
   };
 
   handleClick = e => {
@@ -49,8 +48,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <Header />
-        <Main />
-        <Footer />
+        <Content />
       </React.Fragment>
     );
   }
