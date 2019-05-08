@@ -11,7 +11,6 @@
 * Create logical wrapper components
 * Create functional wrapper components
 * Utilize `children` in composed components
-* Compose the `<List>, <If>, <Card>, <Deck>` Components
 
 ## Routing and Component Composition
 
