@@ -15,14 +15,14 @@ city_explorer_react (repository)
 ├──public
 │  └── index.html
 ├──src
-├── index.js
-└── components
-│   └── app.js
-│   └── header.js
-│   └── search-form.js
-│   └── search-results.js
-│   └── result.js (exports each result component - ie: <Yelp>, <MovieDB> or each component may named/exported as its own file)
-│   └── map.js
+│   └── index.js
+│   └── components
+│       └── app.js
+│       └── header.js
+│       └── search-form.js
+│       └── search-results.js
+│       └── result.js (exports each result component - ie: <Yelp>, <MovieDB> or each component may named/exported as its own file)
+│       └── map.js
 ├── .eslintrc.json
 ├── .gitignore
 ├── package-lock.json
