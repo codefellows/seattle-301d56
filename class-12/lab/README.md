@@ -7,7 +7,6 @@ One caveat is that we don't want our clients to feel the impact. The look, feel,
 
 ## Resources
 - [City Explorer Deployed Backend](https://city-explorer-backend.herokuapp.com)
-- [City Explorer Deployed Frontend](https://codefellows.github.io/city_explorer/)
 
 ## Configuration
 
