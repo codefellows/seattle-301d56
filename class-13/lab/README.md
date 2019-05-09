@@ -21,7 +21,7 @@ city_explorer_react (repository)
 │   └── header.js
 │   └── search-form.js
 │   └── search-results.js
-│   └── result.js (exports each result component - ie: <Yelp>, <MovieDB>)
+│   └── result.js (exports each result component - ie: <Yelp>, <MovieDB> or each component may named/exported as its own file)
 │   └── map.js
 ├── .eslintrc.json
 ├── .gitignore
