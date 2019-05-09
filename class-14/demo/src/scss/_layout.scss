@@ -1,0 +1,21 @@
+main {
+    border: solid 2px $black;
+    padding: $gutter_std / 2;
+    min-height: 100px;
+}
+
+header {
+    background: $black;
+    font-size: 1.5vw;
+    padding: $gutter_std;
+
+    a {
+        color: $white;
+    }
+}
+
+footer {
+    background: $black;
+    color: $white;
+    padding: $gutter_std;
+}

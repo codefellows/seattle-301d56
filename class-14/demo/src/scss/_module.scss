@@ -1,0 +1,27 @@
+h2 {
+    background: $home_bg;
+    padding: $gutter_std;
+}
+
+.list {
+    background: $home_bg / 2;
+    @extend h2;
+
+    li {
+        background: $white;
+        transition: $animation_time all;
+
+        &:hover {
+            background: $black;
+            color: $white;
+        }
+    }
+}
+
+main {
+    > div {
+        background: $black;
+        color: $white;
+        padding: $gutter_std;
+    }
+}
