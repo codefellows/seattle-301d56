@@ -12,6 +12,9 @@ The exam is open-book, open-Google, open-Stack_Overflow, whatever resources you 
 
 - Announcements
     - I'm back! Learned some damn cool stuff.
+    - 401 Entrance Exam! Make sure to go through that this weekend.
+    - All resubmits due Sunday at midnight.
+    - Break between 301 and 401: I'll be on campus, but I'm not going to require y'all to come to campus
 - Warm-up exercise
 - Review code challenges
     - putting it all together is challenging
